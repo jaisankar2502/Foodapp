@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:background="@drawable/bg">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:padding="10dp"
+                    android:text="@string/hi_jai"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="@string/what_do_you_want_to_order_today"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+
+                <SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/search_bg"
+                    android:iconifiedByDefault="false"
+                    android:queryBackground="@color/transparent"
+                    android:queryHint="Search for recipes"
+                    android:theme="@style/ThemeOverlay.Search" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_main_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/carddesign"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_rv_main_category" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:fontFamily="@font/gilroy_bold"
+                android:padding="10dp"
+                android:text="@string/category_name"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_sub_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/carddesign"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_rv_sub_category" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
